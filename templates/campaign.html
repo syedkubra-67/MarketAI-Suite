@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate AI-powered marketing campaigns with MarketAI Suite.">
+    <title>Campaign Generator — MarketAI Suite</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">
+            <div class="logo-icon">🚀</div>
+            <span>MarketAI Suite</span>
+        </a>
+        <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="navbar-links">
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/campaign" class="active">Campaigns</a></li>
+            <li><a href="/pitch">Pitches</a></li>
+            <li><a href="/lead-scoring">Lead Scoring</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <a href="/" class="back-link">← Back to Dashboard</a>
+            <h1>🎯 Marketing Campaign Generator</h1>
+            <p>Describe your product and audience — AI will create a complete campaign strategy.</p>
+        </div>
+
+        <!-- Input Form -->
+        <div class="panel">
+            <div class="panel-title">📝 Campaign Details</div>
+            <form id="campaignForm" class="form-grid">
+                <div class="form-group">
+                    <label for="product">Product / Service Description</label>
+                    <textarea id="product" name="product" rows="3"
+                        placeholder="e.g., A cloud-based project management tool for remote teams..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="audience">Target Audience</label>
+                    <input type="text" id="audience" name="audience"
+                        placeholder="e.g., Small business owners aged 25-45">
+                </div>
+                <div class="form-group">
+                    <label for="platform">Marketing Platform</label>
+                    <select id="platform" name="platform">
+                        <option value="">Select a platform...</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Twitter/X">Twitter / X</option>
+                        <option value="Google Ads">Google Ads</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="Email Marketing">Email Marketing</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary" id="campaignSubmit">
+                    🚀 Generate Campaign
+                </button>
+            </form>
+        </div>
+
+        <!-- Results -->
+        <div id="campaignResults" class="results-panel">
+            <div class="results-header">
+                <h2>✨ Campaign Results</h2>
+            </div>
+            <div class="results-content"></div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        MarketAI Suite &copy; 2026 — AI-Powered Sales & Marketing Platform
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Generating your marketing campaign...</div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

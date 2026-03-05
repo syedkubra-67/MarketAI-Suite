@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate AI-powered sales pitches with MarketAI Suite.">
+    <title>Sales Pitch Generator — MarketAI Suite</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">
+            <div class="logo-icon">🚀</div>
+            <span>MarketAI Suite</span>
+        </a>
+        <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="navbar-links">
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/campaign">Campaigns</a></li>
+            <li><a href="/pitch" class="active">Pitches</a></li>
+            <li><a href="/lead-scoring">Lead Scoring</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <a href="/" class="back-link">← Back to Dashboard</a>
+            <h1>💼 Sales Pitch Generator</h1>
+            <p>Provide your product and prospect details — AI will craft a complete pitch package.</p>
+        </div>
+
+        <!-- Input Form -->
+        <div class="panel">
+            <div class="panel-title">📝 Pitch Details</div>
+            <form id="pitchForm" class="form-grid">
+                <div class="form-group">
+                    <label for="product">Product / Solution Name</label>
+                    <input type="text" id="product" name="product" placeholder="e.g., CloudSync Enterprise Platform">
+                </div>
+                <div class="form-grid-2col">
+                    <div class="form-group">
+                        <label for="persona">Customer Persona</label>
+                        <input type="text" id="persona" name="persona" placeholder="e.g., CTO, Marketing Director">
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <input type="text" id="industry" name="industry" placeholder="e.g., Healthcare, FinTech">
+                    </div>
+                </div>
+                <div class="form-grid-2col">
+                    <div class="form-group">
+                        <label for="company_size">Company Size</label>
+                        <select id="company_size" name="company_size">
+                            <option value="">Select size...</option>
+                            <option value="1-10 employees (Startup)">Startup (1-10)</option>
+                            <option value="11-50 employees (Small)">Small (11-50)</option>
+                            <option value="51-200 employees (Mid-size)">Mid-size (51-200)</option>
+                            <option value="201-1000 employees (Large)">Large (201-1000)</option>
+                            <option value="1000+ employees (Enterprise)">Enterprise (1000+)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget...</option>
+                            <option value="Under $1,000">Under $1,000</option>
+                            <option value="$1,000 - $5,000">$1,000 – $5,000</option>
+                            <option value="$5,000 - $25,000">$5,000 – $25,000</option>
+                            <option value="$25,000 - $100,000">$25,000 – $100,000</option>
+                            <option value="$100,000+">$100,000+</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary" id="pitchSubmit">
+                    💼 Generate Sales Pitch
+                </button>
+            </form>
+        </div>
+
+        <!-- Results -->
+        <div id="pitchResults" class="results-panel">
+            <div class="results-header">
+                <h2>✨ Pitch Results</h2>
+            </div>
+            <div class="results-content"></div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        MarketAI Suite &copy; 2026 — AI-Powered Sales & Marketing Platform
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Crafting your sales pitch...</div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
