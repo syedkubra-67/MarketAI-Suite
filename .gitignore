@@ -6,3 +6,5 @@ venv/
 env/
 .idea/
 .vscode/
+tunnel.log
+app.log
